@@ -1,0 +1,4 @@
+allowBuilds:
+  '@parcel/watcher': false
+overrides:
+  '@babel/core': ^8.1.3
