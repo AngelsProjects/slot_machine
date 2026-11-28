@@ -182,7 +182,7 @@ describe('SlotMachine', () => {
   it('should not allow betting more than the balance', () => {
     const machine = new SlotMachine();
     machine.addBalance(100);
-    expect(() => machine.setBet(200)).toThrowError(
+    expect(() => machine.setBet(200)).toThrow(
       'Insufficient balance. Please add credits to your balance.'
     );
   });
@@ -190,10 +190,10 @@ describe('SlotMachine', () => {
   it('should not allow zero or negative bets', () => {
     const machine = new SlotMachine();
     machine.addBalance(100);
-    expect(() => machine.setBet(0)).toThrowError(
+    expect(() => machine.setBet(0)).toThrow(
       'Invalid bet amount. Please enter a positive number.'
     );
-    expect(() => machine.setBet(-50)).toThrowError(
+    expect(() => machine.setBet(-50)).toThrow(
       'Invalid bet amount. Please enter a positive number.'
     );
   });
